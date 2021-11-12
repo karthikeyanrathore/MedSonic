@@ -1,13 +1,9 @@
 #!/usr/bin/env python3
-from flask import Flask
-from flask_restful import Api
 from flask_restful import reqparse
 from flask_restful import Resource
 import pickle
 import numpy as np
 
-app = Flask(__name__)
-API = Api(app)
 model = pickle.load(open("model/diabetes.pkl", "rb"))
 
 class Diabetes(Resource):
@@ -35,10 +31,4 @@ class Diabetes(Resource):
     print(out)
     return out, 200
  
-
-API.add_resource(Diabetes, "/predict/Diabetes")
-
-if __name__ == "__main__":
-  app.run(debug=True)
-
 
