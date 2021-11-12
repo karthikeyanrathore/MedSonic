@@ -1,1 +1,10 @@
 Ye
+curl --header "Content-Type: application/json" \
+  --request POST \
+    --data '{"Pregnancies": Pregnancies, "Glucose": Glucose, "BloodPressure": BloodPressure, "SkinThickness": SkinThickness, "Insulin": Insu    lin, "BMI": BMI, "DiabetesPedigreeFunction": DiabetesPedigreeFunction, "Age": Age}' \
+      http://127.0.0.1:5000/predict/Diabetes
+
+
+
+- ./server.sh #server
+- ./run.sh #api
