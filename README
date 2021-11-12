@@ -8,3 +8,19 @@ curl --header "Content-Type: application/json" \
 
 - ./server.sh #server
 - ./run.sh #api
+
+
+
+Pneumonia
+2D Convolutional Neural Network Model 
+
+
+20/20 [==============================] - 1s 33ms/step - loss: 1.4915 - acc: 0.7837
+[1.4915168285369873, 0.7836538553237915]
+
+Accuracy: 0.7837
+Dataset: https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia
+Ref: https://github.com/dubeyakshat07/Pneumonia-detection-using-CNN
+
+numpy array : https://www.dropbox.com/sh/lkwpzqraesc45qz/AAAvAzICCm56bNuqeQtFEMKKa?dl=0
+
