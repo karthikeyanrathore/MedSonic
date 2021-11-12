@@ -14,7 +14,6 @@ curl --header "Content-Type: application/json" \
 Pneumonia
 2D Convolutional Neural Network Model 
 
-
 20/20 [==============================] - 1s 33ms/step - loss: 1.4915 - acc: 0.7837
 [1.4915168285369873, 0.7836538553237915]
 
