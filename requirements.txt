@@ -1,4 +1,4 @@
-sklearn==1.0.1
+scikit-learn==1.0.1
 pickle==4.0
 numpy==1.21.3
 flask==2.0.2
