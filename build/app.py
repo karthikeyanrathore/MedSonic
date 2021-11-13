@@ -6,6 +6,11 @@ from heart import Heart
 app = Flask(__name__)
 API = Api(app)
 
+@app.route('/')
+def home():
+  return 'this works'
+
+
 API.add_resource(Diabetes, "/predict/Diabetes")
 API.add_resource(Heart, "/predict/Heart")
 

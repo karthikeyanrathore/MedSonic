@@ -10,7 +10,7 @@ class ModelRequest:
         "DiabetesPedigreeFunction": x[6],
         "Age": x[7]}
     print(body)
-    response = requests.post("http://127.0.0.1:5000/predict/Diabetes", data=body)
+    response = requests.post("https://diseasemodel.azurewebsites.net/predict/Diabetes", data=body)
     if response.status_code == 500:
       return "internal server error"
     if response.status_code == 404:
@@ -26,7 +26,7 @@ class ModelRequest:
         "fbs": x[5], "restecg": x[6], "thalach": x[7], "exang": x[8], "oldpeak": x[9],
         "slope": x[10], "ca": x[11], "thal": x[12]}
     print(body)
-    response = requests.post("http://127.0.0.1:5000/predict/Heart", data=body)
+    response = requests.post("https://diseasemodel.azurewebsites.net/predict/Heart", data=body)
     if response.status_code == 500:
       return "internal server error"
     if response.status_code == 404:
