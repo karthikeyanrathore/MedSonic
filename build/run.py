@@ -4,12 +4,21 @@ import numpy as np
 import requests
 class ModelRequest:
   def diabetes(x):
-    body = {"Pregnancies": x[0], "Glucose": x[1], "BloodPressure": x[2], 
-        "SkinThickness": x[3], "Insulin": x[4], "BMI": x[5], 
-        "DiabetesPedigreeFunction": x[6],
-        "Age": x[7]}
+    body = {"Pregnancies": x[0], 
+            "Glucose": x[1], 
+            "BloodPressure": x[2], 
+            "SkinThickness": x[3], 
+            "Insulin": x[4], 
+            "BMI": x[5], 
+            "DiabetesPedigreeFunction": x[6],
+            "Age": x[7]}
+    try:
+      response = requests.post("http://192.168.29.224:5000/predict/Diabetes", data=body)
+    except requests.exceptions.ConnectionError:
+      print("connection error")
+      exit(0)
+
     print(body)
-    response = requests.post("http://192.168.29.224:5000/predict/Diabetes", data=body)
     if response.status_code == 500:
       return "internal server error"
     if response.status_code == 404:
@@ -20,11 +29,23 @@ class ModelRequest:
       return response.json()
   
   def heart(x):
-    body = { "age": x[0], "sex": x[1], "cp": x[2], "trestbps": x[3], "chol": x[4],
-        "fbs": x[5], "restecg": x[6], "thalach": x[7], "exang": x[8], "oldpeak": x[9],
-        "slope": x[10], "ca": x[11], "thal": x[12]}
+    body = { "age": x[0], 
+        "sex": x[1], "cp": x[2], "trestbps": x[3], "chol": x[4],
+        "fbs": x[5], 
+        "restecg": x[6], 
+        "thalach": x[7], 
+        "exang": x[8], 
+        "oldpeak": x[9],
+        "slope": x[10], 
+        "ca": x[11], 
+        "thal": x[12]}
+    try:
+      response = requests.post("http://192.168.29.224:5000/predict/Heart", data=body)
+    except requests.exceptions.ConnectionError:
+      print("connection error")
+      exit(0)
+
     print(body)
-    response = requests.post("http://192.168.29.224:5000/predict/Heart", data=body)
     if response.status_code == 500:
       return "internal server error"
     if response.status_code == 404:

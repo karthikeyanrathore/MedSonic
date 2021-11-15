@@ -25,7 +25,37 @@ numpy array : https://www.dropbox.com/sh/lkwpzqraesc45qz/AAAvAzICCm56bNuqeQtFEMK
 
 Previous Accuracy: 50%
 - removed single layer.
-- nodes
+- conv layer added
 
 Pneumonia load image & predict
 https://stackoverflow.com/questions/43469281/how-to-predict-input-image-using-trained-model-in-keras
+
+
+Heart Disease
+LogisticRegression
+- Testing Data accuracy:  0.8032786885245902
+
+SVC
+- Testing Data accuracy:  0.819672131147541
+
+RandomForestClassifier
+- 0.8032786885245902 score.
+
+Model selected SVM
+
+
+Diabetes Prediction
+SVC
+- Testing Data accuracy:  0.8225108225108225
+
+LogisticRegression
+- Testing Data accuracy:  0.8051948051948052
+
+RandomForestClassifier
+- Testing Data accuracy:  0.8051948051948052
+
+Model selected SVM.
+
+
+
+
