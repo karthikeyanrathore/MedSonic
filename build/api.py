@@ -8,7 +8,7 @@ API = Api(app)
 
 @app.route('/')
 def home():
-  return 'this works'
+  return 'API works'
 
 
 API.add_resource(Diabetes, "/predict/Diabetes")
