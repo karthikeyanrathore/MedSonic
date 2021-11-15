@@ -27,4 +27,5 @@ Previous Accuracy: 50%
 - removed single layer.
 - nodes
 
-
+Pneumonia load image & predict
+https://stackoverflow.com/questions/43469281/how-to-predict-input-image-using-trained-model-in-keras
