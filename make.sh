@@ -2,6 +2,6 @@
 source ~/.bash_profile
 conda activate
 cd build
-chmod +x api.py
-./api.py
+chmod +x app.py
+./app.py
 cd ../
