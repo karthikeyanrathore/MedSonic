@@ -3,7 +3,6 @@ import json
 import numpy as np
 import requests
 class ModelRequest:
-  @staticmethod
   def diabetes(x):
     body = {"Pregnancies": x[0], "Glucose": x[1], "BloodPressure": x[2], 
         "SkinThickness": x[3], "Insulin": x[4], "BMI": x[5], 
@@ -20,7 +19,6 @@ class ModelRequest:
     if response.status_code == 200:
       return response.json()
   
-  @staticmethod
   def heart(x):
     body = { "age": x[0], "sex": x[1], "cp": x[2], "trestbps": x[3], "chol": x[4],
         "fbs": x[5], "restecg": x[6], "thalach": x[7], "exang": x[8], "oldpeak": x[9],
@@ -38,7 +36,7 @@ class ModelRequest:
 
 
 
-x = ModelRequest()
+x = ModelRequest
 b=[1, 89, 66, 23, 94, 28.1, 0.167, 21]
 print(x.diabetes(b))
 
