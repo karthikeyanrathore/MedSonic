@@ -1,4 +1,4 @@
-## METHODOLOGY
+## Methodology
 In this study we have used a variety of machine learning models for the detection of diseases including heart disease, diabetes and detection of pneumonia. The main approach that we are adopting to train our model includes firstly, data pre-processing (normalization, missing value imputation, converting images to grayscale and resizing image to a standard size.). Secondly, we will be diving our dataset into train, test and validation in order to train and test our model. Lastly, we will optimize our model by changing hyper parameters.
 
 ## Dataset
@@ -18,7 +18,7 @@ before sending it out for training the AI model. In order to cross check and val
 process done by the experts, the images were checked again by a panel of experts.
 
 
-## MODELS
+## Models
 In this section we have primarily covered the various types of Machine Learning models which have been incorporated in the detection of the disease. Some of the models which have been implemented are: Logistic Regression, support vector machine (SVM), convolutional neural networks (CNN) and random forest classifier. Below we have briefly elaborate upon each of these models and their application in this study.
 Logistic Regression
 Logistic regression model is a fairly common one which is used for classification task in the fields of statistics and machine learning. Logistic regression model uses the probability of a sample belonging to a particular class. This model can be used for binomial as well as multinomial classification. The logistic regression model uses sigmoid function on the linear regression hypothesis function. This sigmoid function is given by the following equation:
