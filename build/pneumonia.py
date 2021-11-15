@@ -20,10 +20,10 @@ class Model:
     model = Model.get()
     img = Model.resize(path)
     result = model.predict(img)
-    if result[[0]] > 0.5:
+    # good-luck
+    if result[[0]] > 0.6:
       return 1
     else:
       return 0
 
    
-
