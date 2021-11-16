@@ -40,4 +40,41 @@ w⋅x+b=0
 SVM has many kernel functions which can be used for non-linear classification. Some of the popular kernel functions are Linear, RBF, Polynomial, Sigmoid. We have used SVM in heart disease and diabetes detection models.
 
 
+## Results 
+In the study we have used the machine learning models: Logistic regression, Support Vector Machine, and Random Forest Classifier in the training and validation of the heart disease and diabetes detection model. For the pneumonia detection the architecture of Convolutional Neural Networks  has been used for image analysis and classification.
+Heart Disease Detection Model
+Model Name	Accuracy
+Logistic Regression	0.80327
+Support Vector Machine	0.81967
+Random Forest Classifier	0.80327
+
+Classification Metrics	Score
+Precision	0.82
+Recall	0.82
+F1 score	0.82
+
+In case of heart disease detection, Support Vector Machine showed higher Accuracy (0.81967) as compared to Logistic regression and Random forest classifier. The f1 score obtained for Support vector machine (SVM) was 0.82 for this use case.
+Diabetes Detection Model
+Model Name	Accuracy
+Support Vector Machine	0.82251
+Logistic Regression	0.80519
+Random Forest Classifier	0.80519
+
+Classification Metrics	Score
+Precision	0.82
+Recall	0.82
+F1 score	0.82
+
+In case of diabetes detection, Support Vector Machine showed higher Accuracy (0.82251) as compared to Logistic regression and Random forest classifier. The f1 score obtained for Support vector machine (SVM) was 0.82 for this use case.
+
+Pneumonia Detection Model
+Classification Metrics	Score
+Precision	0.83
+Recall	0.79
+F1 score	0.76
+
+In case of Pneumonia detection, the accuracy score obtained was 0.78 using the Convolutional Neural Network model. The f1 score obtained was 0.76 for this use case.
+	
+
+
 
