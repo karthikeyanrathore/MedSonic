@@ -30,6 +30,16 @@ Previous Accuracy: 50%
 Pneumonia load image & predict
 https://stackoverflow.com/questions/43469281/how-to-predict-input-image-using-trained-model-in-keras
 
+              precision    recall  f1-score   support
+
+           0       0.96      0.44      0.61       234
+           1       0.75      0.99      0.85       390
+
+    accuracy                           0.79       624
+   macro avg       0.86      0.72      0.73       624
+weighted avg       0.83      0.79      0.76       624
+
+
 
 Heart Disease
 LogisticRegression
