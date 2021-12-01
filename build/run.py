@@ -13,7 +13,7 @@ class ModelRequest:
             "DiabetesPedigreeFunction": x[6],
             "Age": x[7]}
     try:
-      response = requests.post("http://192.168.29.224:5000/predict/Diabetes", data=body)
+      response = requests.post("http://192.168.172.47:5000/predict/Diabetes", data=body)
     except requests.exceptions.ConnectionError:
       print("connection error")
       exit(0)
@@ -40,7 +40,7 @@ class ModelRequest:
         "ca": x[11], 
         "thal": x[12]}
     try:
-      response = requests.post("http://192.168.29.224:5000/predict/Heart", data=body)
+      response = requests.post("http://192.168.172.47:5000/predict/Heart", data=body)
     except requests.exceptions.ConnectionError:
       print("connection error")
       exit(0)
