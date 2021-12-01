@@ -26,4 +26,8 @@ class Model:
     else:
       return 0
 
-   
+'''
+yes = Model.predict("data/person1946_bacteria_4874.jpeg")
+no = Model.predict("data/NORMAL2-IM-1427-0001.jpeg")
+print(no)
+'''

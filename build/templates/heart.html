@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<div class="container-fluid">
+<a class="navbar-brand" href="{{url_for('home')}}">Diz-AI</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNav">
+<ul class="navbar-nav">
+<li class="nav-item">
+<a class="nav-link" href="{{url_for('heart')}}">heart</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="{{url_for('diabetes')}}">diabetes</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="{{url_for('home')}}">pneumonia</a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+<div class="container h-100 p-5">
+<figure class="text-center">
+<h3>
+<u><mark>Diz-AI Heart Prediction</mark></u>
+</h3>
+</figure>
+<main class="container">
+<div class="bg-white p-7 rounded">
+<div class="row h-100 justify-content-center align-items-center">
+<div class="col-50 col-md-20 col-lg-5">
+{% if error %}
+<div class="alert alert-danger">
+<strong>Error:</strong> {{ error }}
+</div>
+{% endif %}
+<form method="post"action="{{url_for('heart')}}" >
+
+<div class="form-group w-100">
+<input type="text" name="age" class="form-control"  placeholder="age" >
+</div>
+
+<div class="form-group w-100">
+<input type="text"  name="sex" class="form-control"  placeholder="sex">
+</div>
+
+<div class="form-group w-100">
+<input type="text" name="cp" class="form-control"  placeholder="cp"> 
+</div>
+<div class="form-group w-100">
+<input type="text" name="trestbps" class="form-control" placeholder="trestbps">
+</div>
+<div class="form-group w-100">
+<input type="text" name="chol" class="form-control" placeholder="chol">
+</div>
+
+
+
+<div class="form-group w-100">
+<input type="text" name="fbs" class="form-control" placeholder="fbs"> 
+</div>
+<div class="form-group w-100">
+<input type="text" name="restecg" class="form-control" placeholder="restecg"> 
+</div>
+
+
+<div class="form-group w-100">
+<input type="text" name="thalach" class="form-control" placeholder="thalach"> 
+</div>
+<div class="form-group w-100">
+<input type="text" name="exang" class="form-control" placeholder="exang"> 
+</div>
+
+
+
+<div class="form-group w-100">
+<input type="text" name="oldpeak" class="form-control" placeholder="oldpeak"> 
+</div>
+<div class="form-group w-100">
+<input type="text" name="slope" class="form-control" placeholder="slope"> 
+</div>
+
+
+
+<div class="form-group w-100">
+<input type="text" name="ca" class="form-control" placeholder="ca"> 
+</div>
+<div class="form-group w-100">
+<input type="text" name="thal" class="form-control" placeholder="thal"> 
+</div>
+
+
+<br>
+<div class="col-md-11 text-center">
+<input  class="btn btn-primary"  type="submit" value="SUBMIT">
+</div>
+</div>
+</form>
+<!--
+<img src="{{url_for('static' , filename='lock.jpeg')}}" class="rounded mx-auto d-block" alt="A generic square placeholder image with rounded corners in a figure." style="height:160px">
+<p class=" h3 font-weight-bold text-center"><mark><u>SHA-256</u></mark></p>
+-->
+
+
+</div>
+</div>
+<figure class="text-center">
+<br>
+<h3> 
+  <mark>Heart Disease Prediction: <strong> {{ result }}</strong></mark> </h3>
+</figure>
+</div>
+</div>
+</main>
+</body>
+</html>
