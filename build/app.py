@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
+import os
 from flask import Flask, render_template
 from flask import request
 app = Flask(__name__)
 from run import ModelRequest
+from pneumonia import Model
+UPLOAD_FOLDER = 'store/images'
 
 @app.route("/")
 def home():
@@ -36,8 +39,19 @@ def diabetes():
   return render_template("diabetes.html", result=result)
 
 
-
-
+@app.route("/pneumonia", methods=['GET', 'POST'])
+def pneumonia():
+  result = None
+  if request.method == "POST":
+    image = request.files['img']
+    path = os.path.join(UPLOAD_FOLDER, image.filename)
+    image.save(path)
+    result = Model.predict(path)
+    if result:
+      result = "YES"
+    else:
+      result = "NO"
+  return render_template("pneumonia.html", result=result) 
 
 
 if __name__ == "__main__":
