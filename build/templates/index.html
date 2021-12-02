@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Healthify</title>
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+</head>
+<body>
+<div class="banner">
+<div class="navbar">
+<p class="logo"><b><i>Healthify</i></b></p>
+<ul>
+<li><a href="http://192.168.29.224:5001">Home</a></li>
+<li><a href="http://192.168.29.224:5001/heart">Heart</a></li>
+<li><a href="http://192.168.29.224:5001/diabetes">Diabetes</a></li>
+<li><a href="http://192.168.29.224:5001/pneumonia">Pneumonia</a></li>
+</ul>
+</div>
+<div class="content">
+<h1>HEALTH MATTERS!</h1>
+<p>With Healthify, check your health status in just a few easy steps!<br>
+Detect any Heart, Diabetes and Pneumonia related diseases before its too late! <br> START TODAY!
+</p>
+<div>
+<button type="button" onclick="document.location='http://192.168.29.224:5001/heart'"><span></span> HEART</button>
+<button type="button" onclick="document.location='http://192.168.29.224:5001/diabetes'"><span></span> DIABETES</button>
+<button type="button" onclick="document.location='http://192.168.29.224:5001/pneumonia'"><span></span> PNEUMONIA</button>
+</div>
+</div>
+</div>
+</body>
+</html>
+

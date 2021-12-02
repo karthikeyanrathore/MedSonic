@@ -9,8 +9,8 @@ UPLOAD_FOLDER = 'store/images'
 
 @app.route("/")
 def home():
-  return "Hello World"
-
+  #return "Hello World"
+  return render_template("index.html")
 
 @app.route("/heart", methods=['GET', 'POST'])
 def heart():
