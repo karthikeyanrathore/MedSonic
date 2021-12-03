@@ -19,7 +19,6 @@ Pneumonia
 
 Accuracy: 0.7837
 Dataset: https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia
-Ref: https://github.com/dubeyakshat07/Pneumonia-detection-using-CNN
 
 numpy array : https://www.dropbox.com/sh/lkwpzqraesc45qz/AAAvAzICCm56bNuqeQtFEMKKa?dl=0
 
