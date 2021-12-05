@@ -19,12 +19,15 @@ class Diabetes(Resource):
     parser.add_argument("DiabetesPedigreeFunction")
     parser.add_argument("Age")
     args = parser.parse_args()
-    x = [np.fromiter(args.values() , dtype=float)]
+    x = np.array([np.fromiter(args.values() , dtype=float)])
+    x= x.reshape((8, 1))
     print(x)
+    
     from sklearn.preprocessing import MinMaxScaler
     scaler = MinMaxScaler()
     x = scaler.fit_transform(x)
-
+    
+    x = x.reshape((1, 8))
     result = (model.predict(x))
     print(result)
     out = {"prediction" : int(result[0])}
