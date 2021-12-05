@@ -13,7 +13,7 @@ DEMO
 
 * Diabetes
 - YES
-
+{'Pregnancies': 1.0, 'Glucose': 147.0, 'BloodPressure': 94.0, 'SkinThickness': 41.0, 'Insulin': 0.0, 'BMI': 49.3, 'DiabetesPedigreeFunction': 0.358, 'Age': 27.0}
 
 - NO
 {'Pregnancies': 5.0, 'Glucose': 139.0, 'BloodPressure': 64.0, 'SkinThickness': 35.0, 'Insulin': 140.0, 'BMI': 28.6, 'DiabetesPedigreeFunction': 0.411, 'Age': 26.0}

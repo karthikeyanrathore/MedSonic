@@ -19,14 +19,15 @@ class Diabetes(Resource):
     parser.add_argument("DiabetesPedigreeFunction")
     parser.add_argument("Age")
     args = parser.parse_args()
-    x = np.array([np.fromiter(args.values() , dtype=float)])
-    x= x.reshape((8, 1))
-    print(x)
+    x = [float(args.Pregnancies), float(args.Glucose), float(args.BloodPressure), float(args.SkinThickness), float(args.Insulin), float(args.BMI), float(args.DiabetesPedigreeFunction), float(args.Age)]
     
-    from sklearn.preprocessing import MinMaxScaler
-    scaler = MinMaxScaler()
-    x = scaler.fit_transform(x)
+    maxy = np.array([ 17.  , 199.  , 122.  ,  99.  , 846.  ,  67.1 ,   2.42,  81.  ])
+    miny = np.array([ 0.   ,  0.   ,  0.   ,  0.   ,  0.   ,  0.   ,  0.078, 21.   ])
     
+    for i in range(0, len(x)):
+      x[i] = (x[i] - miny[i])/(maxy[i] - miny[i])
+    
+    x = np.array(x)
     x = x.reshape((1, 8))
     result = (model.predict(x))
     print(result)
