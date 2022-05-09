@@ -1,6 +1,6 @@
 #!/bin/bash
 source ~/.bash_profile
-conda activate
+conda activate batman
 cd build
 chmod +x app.py
 ./app.py
