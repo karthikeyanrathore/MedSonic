@@ -1,6 +1,9 @@
 
-iname: docker-compose-actions-workflow
-on: push
+name: docker-compose-actions-workflow
+on: 
+  push:
+    branches:
+      - "1-chore-refactor-api-endpoints"
 jobs:
   test:
     runs-on: ubuntu-latest
