@@ -1,5 +1,6 @@
 from flask import Blueprint
 from flask_restful import Api
+
 from medsonic.resources import (
     DsStatus,
     PnStatus,
@@ -27,6 +28,6 @@ diabetes_api.add_resource(DsStatus, "/")
 # diabetes_api.add_resource(DsPredict, "/predict")
 
 heart_api.add_resource(HeartStatus, "/")
-# heart_api.add_resource(HeartPredict, "/predict")
+heart_api.add_resource(HeartPredict, "/predict")
 
 # md_helper_api.add_resource(MakeReport, "/report")
