@@ -2,6 +2,9 @@ from flask_restful import Resource
 from flask import make_response, jsonify, request
 import numpy as np
 import pickle 
+import os
+from medsonic.config import MEDSONIC_REPO_DIR 
+
 
 class DsStatus(Resource):
     # Diabetes model status checker
@@ -44,7 +47,12 @@ class HeartPredict(Resource):
                 jsonify({"error": "Bad Request"}), 400
             )
         # Todo: idk validate payload (not necessary)
-        imported_model = pickle.load(open("medsonic/default_models/heart_model.pkl", "rb"))
+        dfmodel_path = f"{MEDSONIC_REPO_DIR}/medsonic/default_models/heart_model.pkl"
+        if not os.path.exists(dfmodel_path):
+            return make_response(
+                jsonify({"error": "Model not found in the server."}, 404)
+        )
+        imported_model = pickle.load(open(dfmodel_path, "rb"))
         model_input = [np.fromiter(payload.values() , dtype=float)]
         try:
             # features should be in same order as training model. check notebook
