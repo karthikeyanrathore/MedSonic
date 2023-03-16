@@ -2,6 +2,7 @@ from medsonic.views import (
     diabetes_bp,
     pneumonia_bp,
     heart_bp,
+    md_helper_bp,
 )
 from medsonic import config
 from flask import Flask, make_response, jsonify
@@ -28,5 +29,7 @@ def create_app():
     app.register_blueprint(
         heart_bp, url_prefix=f"/{config.CURRENT_VERSION_API}/heart"
     )
-
+    app.register_blueprint(
+        md_helper_bp, url_prefix=f"/{config.CURRENT_VERSION_API}/medsonic/helper"
+    )
     return app
