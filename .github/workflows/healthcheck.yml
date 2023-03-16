@@ -9,7 +9,7 @@ on:
     branches: [ main ]
   schedule:
     # Scheduler: set to run every month on Monday at 17:00.
-    -cron: '0 17 1 * 0'
+    - cron: '0 17 1 * 0'
 
 jobs:
   docker-healthcheck:
