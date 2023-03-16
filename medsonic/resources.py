@@ -1,7 +1,7 @@
 from flask_restful import Resource
 from flask import make_response, jsonify, request
 import numpy as np
-#import pickle 
+import pickle 
 import os
 from medsonic.config import MEDSONIC_REPO_DIR 
 
