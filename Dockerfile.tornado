@@ -12,7 +12,7 @@ RUN pip install --upgrade pip
 
 RUN pip install -r /tmp/requirements.txt 
 
-# RUN pip install tornado
+RUN pip install tornado
 
 # Building wheel for numpy: takes too long.
 RUN pip install numpy
