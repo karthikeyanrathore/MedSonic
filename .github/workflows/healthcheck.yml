@@ -2,7 +2,15 @@
 # https://github.com/peter-evans/smoke-testing
 
 name: docker-compose-actions-workflow
-on: push
+on:   
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    # Scheduler: set to run every month on Monday at 17:00.
+    -cron: '0 17 1 * 0'
+
 jobs:
   docker-healthcheck:
     runs-on: ubuntu-latest
