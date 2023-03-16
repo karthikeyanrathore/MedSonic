@@ -1,0 +1,80 @@
+Ye
+curl --header "Content-Type: application/json" \
+  --request POST \
+    --data '{"Pregnancies": Pregnancies, "Glucose": Glucose, "BloodPressure": BloodPressure, "SkinThickness": SkinThickness, "Insulin": Insu    lin, "BMI": BMI, "DiabetesPedigreeFunction": DiabetesPedigreeFunction, "Age": Age}' \
+      http://127.0.0.1:5000/predict/Diabetes
+
+
+- ./make.sh #website
+- ./server.sh #server
+- ./run.sh #api
+
+
+
+Pneumonia
+2D Convolutional Neural Network Model 
+
+20/20 [==============================] - 1s 33ms/step - loss: 1.4915 - acc: 0.7837
+[1.4915168285369873, 0.7836538553237915]
+
+Accuracy: 0.7837
+Dataset: https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia
+
+numpy array : https://www.dropbox.com/sh/lkwpzqraesc45qz/AAAvAzICCm56bNuqeQtFEMKKa?dl=0
+
+Previous Accuracy: 50%
+- removed single layer.
+- conv layer added
+
+Pneumonia load image & predict
+https://stackoverflow.com/questions/43469281/how-to-predict-input-image-using-trained-model-in-keras
+
+              precision    recall  f1-score   support
+
+           0       0.96      0.44      0.61       234
+           1       0.75      0.99      0.85       390
+
+    accuracy                           0.79       624
+   macro avg       0.86      0.72      0.73       624
+weighted avg       0.83      0.79      0.76       624
+
+
+
+Heart Disease
+LogisticRegression
+- Testing Data accuracy:  0.8032786885245902
+
+SVC
+- Testing Data accuracy:  0.819672131147541
+
+RandomForestClassifier
+- 0.8032786885245902 score.
+
+Model selected SVM
+
+
+Diabetes Prediction
+SVC
+- Testing Data accuracy:  0.8225108225108225
+
+LogisticRegression
+- Testing Data accuracy:  0.8051948051948052
+
+RandomForestClassifier
+- Testing Data accuracy:  0.8051948051948052
+
+Model selected SVM.
+
+
+
+PPT
+- Intro (ANRUP)
+- problem statement (ANRUP)
+- closely related work (ANIKET)
+- proposed methodology (ASF)
+- snapshots (KARTHIK)
+- experimental results (KARTHIK)
+- findings (ANIKET)
+- conclusion (KARTHIK)
+- ref (KARTHIK)
+- social media (KARTHIK)
