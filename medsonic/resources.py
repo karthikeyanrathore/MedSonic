@@ -49,9 +49,12 @@ class HeartPredict(Resource):
         # Todo: idk validate payload (not necessary)
         dfmodel_path = f"{MEDSONIC_REPO_DIR}/medsonic/default_models/heart_model.pkl"
         if not os.path.exists(dfmodel_path):
+            # for docker container: /home/medsonic
+            dfmodel_path = f"{MEDSONIC_REPO_DIR}/default_models/heart_model.pkl"
+        if not os.path.exists(dfmodel_path):
             return make_response(
-                jsonify({"error": "Model not found in the server."}, 404)
-        )
+                jsonify({"error": "Model not found in the server."}), 404
+            )
         imported_model = pickle.load(open(dfmodel_path, "rb"))
         model_input = [np.fromiter(payload.values() , dtype=float)]
         try:

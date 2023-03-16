@@ -1,0 +1,29 @@
+FROM python:slim
+
+LABEL maintainer = ""
+
+COPY requirements.txt /tmp/requirements.txt
+
+ENV PYTHONUNBUFFERED=TRUE
+
+RUN pip install --upgrade pip
+# RUN apk add --no-cache --virtual .build-deps gcc libc-dev \
+#     && pip install --no-cache-dir -r /tmp/requirements.txt 
+
+RUN pip install -r /tmp/requirements.txt 
+
+RUN pip install tornado
+
+# Building wheel for numpy: takes too long.
+RUN pip install numpy
+RUN pip install scipy
+RUN pip install scikit_learn
+
+COPY wsgi.py /home
+COPY ./medsonic /home/medsonic
+
+WORKDIR /home/medsonic
+
+CMD python3 /home/wsgi.py
+
+EXPOSE 8080
