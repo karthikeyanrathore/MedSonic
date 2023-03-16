@@ -1,0 +1,3 @@
+CURRENT_VERSION_API = "v1"
+
+DEBUG = True
