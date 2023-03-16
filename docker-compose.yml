@@ -1,0 +1,10 @@
+services:
+  medsonic-api:
+    container_name: medsonic-api
+    build:
+      context: .
+      dockerfile: Dockerfile.tornado
+    ports:
+      - "8080:8080" 
+    volumes:
+      - ./medsonic:/home/medsonic

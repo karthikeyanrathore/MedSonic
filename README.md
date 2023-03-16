@@ -1,14 +1,19 @@
 ## MedSonic
 
-### run
-```
-./server.sh
-./make.sh
+Microservice to predict diabetes, heart and pneumonia disease.
+
+## Run medsonic-api service
+
+```bash
+# Build service
+docker-compose build
+
+# running service
+docker-compose up
+
+# stop service
+docker-compose down
 ```
 
-### Team Members
-- Aniket Purkayastha
-- Karthikeyan Rathore
-- Anrup Sharma
-- [Asfahan shah](https://github.com/a-shah1200)
+
 
