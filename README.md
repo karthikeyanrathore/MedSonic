@@ -1,4 +1,4 @@
-## MedSonic
+## MedSonic [![docker-compose-actions-workflow](https://github.com/karthikeyanrathore/MedSonic/actions/workflows/healthcheck.yml/badge.svg)](https://github.com/karthikeyanrathore/MedSonic/actions/workflows/healthcheck.yml)
 
 Microservice to predict diabetes, heart and pneumonia disease.
 
