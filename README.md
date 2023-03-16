@@ -1,8 +1,8 @@
-# MedSonic
+## MedSonic
 
 Microservice to predict diabetes, heart and pneumonia disease.
 
-# Run medsonic-api service
+## Run medsonic-api service
 
 ```bash
 # Build service
