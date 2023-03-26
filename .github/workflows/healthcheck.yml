@@ -19,7 +19,7 @@ jobs:
       - name: Build the stack
         run: docker-compose up -d
       - name: server-healthcheck
-        run: docker run --network container:medsonic-api jwilder/dockerize -wait http://localhost:8080/ -timeout 10s -wait-retry-interval 5s
+        run: docker run --network container:medsonic-api jwilder/dockerize -wait http://localhost:8080/v1/diabetes -timeout 10s -wait-retry-interval 5s
   docker-compose-test:
     runs-on: ubuntu-latest
     steps:
