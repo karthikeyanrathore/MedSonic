@@ -70,7 +70,7 @@ class DsPredict(Resource):
 class PnPredict(Resource):
     # Make pneumonia prediction and log it.
     def post(self):
-        # TODO: Think way of adding tensorflow to docker.
+        # TODO: Think ways of adding tensorflow to docker.
         # pip install tensorflow (530 mb) will take forever.
 
         # if request.content_type.find("multipart/form-data") < 0:
