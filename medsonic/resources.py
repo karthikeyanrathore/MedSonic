@@ -72,6 +72,7 @@ class PnPredict(Resource):
     def post(self):
         # TODO: Think ways of adding tensorflow to docker.
         # pip install tensorflow (530 mb) will take forever.
+        # Maybe we can have separate flask-service for this ep.? 
 
         # if request.content_type.find("multipart/form-data") < 0:
         #     return make_response(jsonify({"error": "Bad content type. Accepted Request: multipart format."}), 400)
