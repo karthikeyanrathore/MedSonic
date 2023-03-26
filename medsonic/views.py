@@ -25,7 +25,7 @@ pneumonia_api.add_resource(PnStatus, "/")
 # pneumonia_api.add_resource(PnPredict, "/predict")
 
 diabetes_api.add_resource(DsStatus, "/")
-# diabetes_api.add_resource(DsPredict, "/predict")
+diabetes_api.add_resource(DsPredict, "/predict")
 
 heart_api.add_resource(HeartStatus, "/")
 heart_api.add_resource(HeartPredict, "/predict")

@@ -18,6 +18,7 @@ RUN pip install tornado
 RUN pip install numpy
 RUN pip install scipy
 RUN pip install scikit_learn
+# RUN pip install keras (+ tensorflow)
 
 COPY wsgi.py /home
 COPY ./medsonic /home/medsonic
