@@ -63,8 +63,8 @@ class DsPredict(Resource):
             result = imported_model.predict(model_input)
         except ValueError as error:
             msg = "error.%s" % repr(error)
-            return make_response(jsonify({"error": msg}, 200))
-        return make_response(jsonify({"prediction": bool(result[0])}, 200))
+            return make_response(jsonify({"error": msg}), 200)
+        return make_response(jsonify({"prediction": bool(result[0])}), 200)
         
 
 class PnPredict(Resource):
@@ -121,8 +121,8 @@ class HeartPredict(Resource):
             result = imported_model.predict(model_input)
         except ValueError as error:
             msg = "error.%s" % repr(error)
-            return make_response(jsonify({"error": msg}, 200))
-        return make_response(jsonify({"prediction": bool(result[0])}, 200))
+            return make_response(jsonify({"error": msg}), 200)
+        return make_response(jsonify({"prediction": bool(result[0])}), 200)
 
 
 class MakeReport(Resource):

@@ -20,3 +20,14 @@ jobs:
         run: docker-compose up -d
       - name: server-healthcheck
         run: docker run --network container:medsonic-api jwilder/dockerize -wait http://localhost:8080/ -timeout 10s -wait-retry-interval 5s
+  docker-compose-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: build medsonic-api service
+        run: docker-compose build
+      - name: server-test
+        run: docker-compose run medsonic-api sh  -c "python -m pytest -v"
+
+
+

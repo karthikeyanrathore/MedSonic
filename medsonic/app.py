@@ -10,11 +10,11 @@ from flask import Flask, make_response, jsonify
 
 def endpoint_not_found(e):
     return make_response(
-        jsonify({"error": "The requested URL was not found on the server."}, 404)
-    )
+        jsonify({"error": "The requested URL was not found on the server."}), 404)
+
 
 def handle_assertion_error(e):
-    return make_response(jsonify({"AssertionError": (e.__str__())}, 404))
+    return make_response(jsonify({"AssertionError": (e.__str__())}), 404)
 
 def create_app():
     app = Flask(__name__)
