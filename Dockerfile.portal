@@ -11,10 +11,8 @@ RUN npm install -g npm@9.2.0
 
 COPY ./web /home/app
 
-
-# https://stackoverflow.com/questions/75570207/nodeinternal-modules-cjs-loader1078-throw-err
-# https://github.com/karthikeyanrathore/MedSonic/actions/runs/4532505545/jobs/7983981965#step:3:230
-RUN npm i -g stylelint@version
+# https://github.com/addyosmani/a11y/issues/13#issuecomment-67204681
+RUN npm install chalk
 
 RUN npm run build
 
