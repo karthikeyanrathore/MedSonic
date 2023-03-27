@@ -4,7 +4,8 @@ RUN npm install -g http-server
 
 WORKDIR /home/app
 
-COPY ./web/package*.json /home/app
+COPY ./web/package.json /home/app
+COPY ./web/package-lock.json /home/app
 
 RUN npm install -g npm@9.2.0
 
