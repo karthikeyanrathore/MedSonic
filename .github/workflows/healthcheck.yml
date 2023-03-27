@@ -25,7 +25,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: build medsonic-api service
-        run: docker-compose build
+        run: docker-compose build medsonic-api
       - name: server-test
         run: docker-compose run medsonic-api sh  -c "python -m pytest -v"
 

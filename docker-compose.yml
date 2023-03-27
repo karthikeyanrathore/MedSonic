@@ -5,6 +5,16 @@ services:
       context: .
       dockerfile: Dockerfile.tornado
     ports:
-      - "8080:8080" 
+      - "3080:3080" 
     volumes:
       - ./medsonic:/home/medsonic
+
+  web-portal:
+    container_name: web-portal
+    build:
+      context: .
+      dockerfile: Dockerfile.portal
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./web:/app
