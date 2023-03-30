@@ -6,6 +6,7 @@ from medsonic.views import (
 )
 from medsonic import config
 from flask import Flask, make_response, jsonify
+from flask_cors import CORS
 
 
 def endpoint_not_found(e):
@@ -19,6 +20,10 @@ def handle_assertion_error(e):
 def create_app():
     app = Flask(__name__)
     app.config["DEBUG"] = config.DEBUG
+
+    if config.CORS:
+        print("CORS running on flask-app")
+        CORS(app)
 
     # custom error handler
     # https://flask.palletsprojects.com/en/2.2.x/errorhandling/

@@ -63,7 +63,7 @@ class DsPredict(Resource):
             result = imported_model.predict(model_input)
         except ValueError as error:
             msg = "error.%s" % repr(error)
-            return make_response(jsonify({"error": msg}), 200)
+            return make_response(jsonify({"error": msg}), 404)
         return make_response(jsonify({"prediction": bool(result[0])}), 200)
         
 
@@ -114,15 +114,16 @@ class HeartPredict(Resource):
                 jsonify({"error": "Model not found in the server."}), 404
             )
         imported_model = pickle.load(open(dfmodel_path, "rb"))
-        model_input = [np.fromiter(payload.values(), dtype=float)]
+        np_model_input = np.fromiter(payload.values(), dtype=float) 
+        model_input = [np_model_input]
         try:
-            assert model_input.size == 13, "Warning: Numpy array size is not 13"
+            assert (np_model_input.size) == 13, "Warning: Model input features does not equal to 13."
             # features should be in same order as training model. check notebook
             # TODO: make dynamic feature input.
             result = imported_model.predict(model_input)
         except ValueError as error:
             msg = "error.%s" % repr(error)
-            return make_response(jsonify({"error": msg}), 200)
+            return make_response(jsonify({"error": msg}), 404)
         return make_response(jsonify({"prediction": bool(result[0])}), 200)
 
 
