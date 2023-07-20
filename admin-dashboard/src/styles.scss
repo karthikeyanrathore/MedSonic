@@ -1,0 +1,85 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "primeng/resources/themes/viva-dark/theme.css";
+@import "./app/styles/auto.scss";
+
+
+html {
+    font-family: "helvetica";
+    font-size: 16px;
+}
+
+/**
+ * Reset some basic elements
+ */
+ body, h1, h2, h3, h4, h5, h6, 
+ p, blockquote, pre, hr, 
+ dl, dd, ol, ul, figure {
+   margin: 0;
+   padding: 0;
+ 
+ }
+ 
+ 
+ 
+ /**
+  * Basic styling
+  */
+ body {
+   font: 400 #{16px}/#{1.5} helvetica;
+   color: #EEEEEE;
+   background-color: #181818 ;
+   -webkit-text-size-adjust: 100%;
+   -webkit-font-feature-settings: "kern" 1;
+      -moz-font-feature-settings: "kern" 1;
+        -o-font-feature-settings: "kern" 1;
+           font-feature-settings: "kern" 1;
+   font-kerning: normal;
+   display: flex;
+   min-height: 100vh;
+   flex-direction: column;
+   overflow-wrap: break-word;
+ }
+ 
+ 
+ 
+ /**
+  * Set `margin-bottom` to maintain vertical rhythm
+  */
+ h1, h2, h3, h4, h5, h6, 
+ p, blockquote, pre,
+ ul, ol, dl, figure,
+ %vertical-rhythm {
+   margin-bottom: 30px * .5; 
+ }
+ 
+ hr {
+   margin-top: 25px;
+   margin-bottom: 20px;
+ }
+ 
+ /**
+  * `main` element
+  */
+ main {
+   display: block; /* Default value of `display` of `main` element is 'inline' in IE 11. */
+ }
+ 
+
+ /**
+ * Wrapper
+ */
+.wrapper {
+    max-width: calc(#{$content-width} - (#{$spacing-unit}));
+    margin-right: auto;
+    margin-left: 40px;
+    padding-right: $spacing-unit * .5; 
+    padding-left: $spacing-unit * .5; 
+    @extend %clearfix;
+  
+    @media screen and (min-width: $on-large) {
+      max-width: calc(#{$content-width} - (#{$spacing-unit} * 2 ));
+      padding-right: $spacing-unit;
+      padding-left: $spacing-unit;
+    }
+  }
